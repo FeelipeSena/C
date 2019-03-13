@@ -1,0 +1,45 @@
+/*  EXERCICIO 2 e 3 */
+#include <stdio.h>
+#include <stdlib.h>
+const int N = 5;
+int main()
+{
+	int mat[N][5], i, j;
+	// CARGA DA MATRIZ
+	for(i=0;i<N;i++){
+		for(j=0;j<N;j++){
+			printf("Digite valor da posicao %d %d:", i+1, j+1);
+			scanf("%d", &mat[i][j]);
+		}
+	}
+	// IMPRESSAO DA MATRIZ CARREGADA
+	puts("MATRIZ");
+	for(i=0;i<N;i++){
+		for(j=0;j<N;j++){
+			printf("%02d ", mat[i][j]);
+		}
+		printf("\n");
+	}	
+	// IMPRESSAO DA DIAGONAL PRINCIPAL
+	puts("DIAGONAL PRINCIPAL");
+	for(i=0;i<N;i++){
+		for(j=0;j<N;j++){
+			if (i == j)
+				printf("%02d ", mat[i][j]);
+			else
+				printf("   ");
+		}
+		printf("\n");
+	}		
+	// IMPRESSAO DA DIAGONAL PRINCIPAL
+	puts("DIAGONAL SECUNDARIA");
+	for(i=0;i<N;i++){
+		for(j=0;j<N;j++){
+			if (i+j == N-1)
+				printf("%02d ", mat[i][j]);
+			else
+				printf("   ");
+		}
+		printf("\n");
+	}			
+}

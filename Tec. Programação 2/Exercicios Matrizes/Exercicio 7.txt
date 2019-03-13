@@ -1,0 +1,35 @@
+/*	EXERCICIO 7
+	Criar um programa para calcular o preço total dos produtos de um pedido. 
+	Para efetuar este cálculo é necessário fazer a leitura de duas matrizes 
+	(ambas com 5 elementos): produtos e itens.
+	A matriz de produto possui apenas uma coluna que deve conter o valor de uma 
+	unidade daquele produto.  
+	A matriz de itens possui duas colunas: uma para indicar o código do produto e 
+	outra para a quantidade daquele produto. O programa deve imprimir o código e o 
+	valor total de cada produto em estoque e o valor total do estoque.
+*/
+#include <stdlib.h>
+#include <stdio.h>
+#define N 5
+int main(){
+	int Mi[5][2],i;
+	float Mp[5][1],vTotal=0;
+	//CARGA DA MATRIZ de ITENS 
+	for(i=0;i<N;i++){
+		printf("Informe o Codigo [%d] e a quantidade[%d]: ", i,i);
+		scanf("%d%d", &Mi[i][0], &Mi[i][1]);
+	}
+	//CARGA DA MATRIZ PRODUTO
+	for(i=0;i<N;i++){
+		printf("Informe o valor do Produto[%d]: ", i);
+		scanf("%f", &Mp[i][0]);
+	}
+	//IMPRESSAO DOS PRODUTOS e ITENS
+	printf("\n\nRELACAO DOS PRODUTOS EM ESTOQUE\n\n");
+	printf("CODIGO QUANTIDADE 		V.UNIT. V.TOTAL\n");	
+	for(i=0;i<N;i++){
+		vTotal+= Mi[i][1]*Mp[i][0];
+		printf("%06d\t\t%d \t %.2f\t %.2f\n",Mi[i][0],Mi[i][1], Mp[i][0], Mi[i][1]*Mp[i][0]);
+	}
+	printf("\n\nValor total do Estoque: %.2f", vTotal);
+}

@@ -1,0 +1,27 @@
+/*    EXERCICIO 4 e 5 */
+#include <stdio.h>
+#include <stdlib.h>
+#define N 50
+
+int main(){
+	char frase[4][N];
+	int i, j;
+	for(i=0;i<4;i++){
+		printf("Digite a frase %d:",i+1);
+		gets(frase[i]);
+	}
+	// IMPRIME A FRASE NORMALMENTE - EXERCICIO 4
+	puts("EXERCICIO 4 - FRASE NORMAL");
+	for(i=0;i<4;i++){
+		printf("\n%s",frase[i]);
+	}
+	// IMPRIME A FRASE DE TRAS PARA FRENTE - EXERCICIO 5
+	puts("EXERCICIO 5 - FRASE INVERTIDA");
+	for(i=0;i<4;i++){
+		for(j=0;frase[i][j] != '\0';j++); //FOR PARA ACHAR O ULTIMO CARACTER DA FRASE
+		for(j-=1;j >= 0;j--){
+			printf("%c",frase[i][j]);
+		}
+		printf("\n");
+	}
+}

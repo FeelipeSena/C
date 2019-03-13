@@ -10,13 +10,13 @@ Lista* inicializa (void);
 void imprime (Lista* l);
 
 int main (void){
-Lista* l; /* declara uma lista não inicializada */
-l = inicializa(); /* inicializa lista como vazia */
-l = insere(l, 23); /* insere na lista o elemento 23 */
-l = insere(l, 45); /* insere na lista o elemento 45 */
-imprime(l);
+	Lista* l; /* declara uma lista não inicializada */
+	l = inicializa(); /* inicializa lista como vazia */
+	l = insere(l, 23); /* insere na lista o elemento 23 */
+	l = insere(l, 45); /* insere na lista o elemento 45 */
+	imprime(l);
 
-return 0;
+	return 0;
 }
 
 

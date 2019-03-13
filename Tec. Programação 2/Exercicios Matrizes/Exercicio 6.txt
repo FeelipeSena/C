@@ -1,0 +1,33 @@
+/*	EXERCICIO 6
+	Calcular o valor do Produto Escalar de dois vetores de 5 posições cada um 
+	(não armazenar em outro vetor). O produto escalar é obtido pelo somatório 
+	dos valores resultantes da multiplicação de cada um dos elementos dos dois 
+	vetores que possuem o mesmo índice:
+	Exemplo: u=[3,4] e v=[-2,5] é:  u.v = 3.(-2) + 4.(5) = -6+20 = 14
+
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#define N 5
+int main(){
+	int u[5], v[5], i, p=0;
+	// CARGA DOS VETORES u E v
+	for(i=0;i<N;i++){
+		printf("Carga de u[%d] v[%d]: ",i,i);
+		scanf("%d%d", &u[i], &v[i]);
+	}
+	// IMPRESSAO DOS VETORES PARA CONFERENCIA
+	puts("Vetor u");
+	for(i=0;i<N;i++){
+		printf("%d ",u[i]);
+	}
+	puts("Vetor v");
+	for(i=0;i<N;i++){
+		printf("%d ",v[i]);
+	}
+	// CALCULO DO PRODUTO ESCALAR
+	for(i=0;i<N;i++){
+		p+=u[i]*v[i];
+	}
+	printf("\nProduto Escalar = %d",p);
+}
