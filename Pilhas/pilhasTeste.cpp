@@ -28,6 +28,7 @@ int main(){
     push(p, 2);
     push(p, 3);
     push(p, 4);
+    printf("Comprimento : %i", comprimento(p));
     
 
     push(q, 5);

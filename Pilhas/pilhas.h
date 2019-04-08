@@ -21,6 +21,7 @@ float pop (Pilha *p);
 int vazia (Pilha *p);
 void libera (Pilha *p);
 void imprime (Pilha *p);
+int comprimento(Pilha *p);
  
 //INICIA A LISTA COMO SENDO VAZIA
 Pilha *cria(void) {
@@ -84,3 +85,14 @@ void imprime (Pilha *p){
         printf ("%.2f\n",q->info);
     }
 }
+
+//COMPRIMENTO DA PILHA
+int comprimento (Pilha *p){
+    No *q;
+    int i;
+    for (q=p->prim; q!=NULL; q=q->prox){
+    	i = i + 1;
+    }
+    return i;
+}
+
